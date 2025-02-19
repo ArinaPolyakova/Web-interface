@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Панель управления</title>
+    <link rel="stylesheet" href="wwwrootcss/login.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="wwwrootimages\1650436562_photo_2022-04-20_09-35-40.jpg" alt="Верхнее изображение" class="header-image" />
+            <div class="header-bar">
+                <div class="logo">
+                    <img src="wwwrootimages\logotip.PNG" alt="Логотип" />
+                </div>
+                <div class="title">
+                    <i class="fas fa-home"></i> Панель управления
+                </div>
+                <div class="icons">
+                    <i class="fas fa-bell"></i>
+                   
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="login-form">
+                <h2>Авторизация</h2>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="Email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="Password" class="form-control" />
+                    </div>
+
+                    <div class="form-actions">
+                        <a asp-page="./ForgotPassword">Восстановление пароля</a>
+                        <button type="submit" class="btn-login">Войти</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

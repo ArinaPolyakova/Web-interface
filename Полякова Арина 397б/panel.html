@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: #004f99;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .header-middle input[type="text"] {
+            padding: 5px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right i {
+            margin-right: 10px;
+        }
+
+        .header-right a {
+            color: white;
+            text-decoration: none;
+            background-color: #0047ab;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+
+        
+        .container {
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        .section {
+            width: 400px;
+            background-color: #e0e0e0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 5px;
+        }
+
+        .menu-item {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-item i {
+            cursor: pointer;
+        }
+
+        .menu-item-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-item-content i {
+            margin-right: 10px;
+        }
+
+        .fa-home:before { content: "\f015"; } 
+        .fa-bell:before { content: "\f0f3"; } 
+        .fa-desktop:before { content: "\f108"; } 
+        .fa-users:before { content: "\f0c0"; } 
+        .fa-check-square:before { content: "\f14a"; } 
+        .fa-cube:before { content: "\f1b2"; }
+        .fa-cogs:before { content: "\f085"; } 
+        .fa-cog:before { content: "\f013"; }
+        .fa-plus:before { content: "\f067"; } 
+        .fa-minus:before { content: "\f068"; }
+        .fa-user:before { content: "\f007"; }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="wwwrootimages/logotip.PNG" alt="Logo">
+        </div>
+        <div class="header-middle">
+            <input type="text" placeholder="Панель управления">
+        </div>
+        <div class="header-right">
+            <i class="fas fa-bell"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-desktop"></i>
+                Site
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <i class="fas fa-users"></i>
+                    Пользователи
+                </div>
+<i class="fas fa-plus"></i>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <i class="fas fa-check-square"></i>
+                    Участники
+                </div>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <i class="fas fa-cube"></i>
+                    Модули
+                </div>
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-cogs"></i>
+                System
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-content">
+                    <i class="fas fa-cog"></i>
+                    Общие настройки
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

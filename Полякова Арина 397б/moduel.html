@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        .header {
+            background-color: #004f99;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-items {
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .participants-list {
+            margin-top: 20px;
+        }
+
+        .participant-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .participant-row:last-child {
+            border-bottom: none;
+        }
+
+        .add-participant {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .add-participant button {
+            background-color: #ddd;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-participant input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+        .scrollable-list {
+            max-height: 250px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+
+        .scrollable-list::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .scrollable-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .scrollable-list::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 2.5px;
+        }
+
+        .scrollable-list::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+
+        .delete-button {
+            background: none;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .header a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .header i {
+            margin-right: 5px;
+        }
+
+        .header i.fa-home,
+        .header i.fa-bell {
+            margin-right: 5px;
+            font-size: 1.2em;
+        }
+
+
+        .header-space {
+            width: 100%;
+            text-align: center;
+        }
+
+        .create-module-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+            align-self: flex-end;
+        }
+
+
+        .create-module-button:hover {
+            background-color: #66bb6a;
+        }
+
+        .create-module-button:active {
+            background-color: #81c784;
+        }
+
+        .header-middle {
+            width: 100%;
+            text-align: center;
+        }
+
+        .header-right {
+            margin-left: auto;
+        }
+
+        .header-left img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .header-middle input[type="text"] {
+            padding: 5px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .header-right i {
+            margin-right: 10px;
+        }
+
+        .header-right a {
+            color: white;
+            text-decoration: none;
+            background-color: #0047ab;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-items">
+            <img src="wwwrootimages/logotip.PNG" alt="Logo" style="height: 30px; margin-right: 10px;">
+        </div>
+        <div class="header-middle">
+            <input type="text" placeholder="Панель управления">
+        </div>
+        <div class="header-right">
+            <i class="fas fa-bell"></i>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="form-group">
+            <label for="title">Название</label>
+            <input type="text" id="title">
+        </div>
+
+        <div class="form-group">
+            <label for="media">Медиа</label>
+            <input type="text" id="media">
+        </div>
+
+        <div class="add-participant">
+            <button>Добавить участника</button>
+            <input type="text" placeholder="">
+        </div>
+
+        <div class="participants-list">
+            <div class="scrollable-list">
+                <div class="participant-row">
+                    <span>Участник 1</span>
+                    <button class="delete-button">×</button>
+                </div>
+                <div class="participant-row">
+                    <span>Участник 2</span>
+                    <button class="delete-button">×</button>
+                </div>
+                <div class="participant-row">
+                    <span>Участник 3</span>
+                    <button class="delete-button">×</button>
+                </div>
+                <div class="participant-row">
+                    <span>Участник 4</span>
+                    <button class="delete-button">×</button>
+                </div>
+                <div class="participant-row">
+                    <span>Участник 5</span>
+                    <button class="delete-button">×</button>
+                </div>
+                <div class="participant-row">
+                    <span>Участник 6</span>
+                    <button class="delete-button">×</button>
+                </div>
+                <div class="participant-row">
+                    <span>Участник 7</span>
+                    <button class="delete-button">×</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="create-module-button">Создать модуль</button>
+    </div>
+
+</body>
+
+</html>
